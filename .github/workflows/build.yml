@@ -39,7 +39,7 @@ jobs:
           echo "commit=$(echo ${{ github.sha }} | cut -c 1-7)" >> $GITHUB_ENV
 
       - name: Upload APK
-        uses: actions/upload-artifact@v3.1.0
+        uses: actions/upload-artifact@v3
         with:
           name: APKKiller(v${{ env.version }}@${{ env.commit }})
           path: app/build/outputs/apk/**/app-*.apk
